@@ -69,28 +69,28 @@
       const slide = document.getElementById("primary");
       let index = 0;
 
-    //   function next() {
-    //     if (index < allposimages.length - 1) {
-    //       index++;
-    //     } else {
-    //       index = 0;
-    //     }
-    //     slide.src = allposimages[index];
-    //   }
+      function next() {
+        if (index < allposimages.length - 1) {
+          index++;
+        } else {
+          index = 0;
+        }
+        slide.src = allposimages[index];
+      }
 
-    //   function pre(){
-    //     if(index>0){
-    //         index--
-    //     }
-    //     else{
-    //         // index=3; /*or*/
-    //         index=  allposimages.length - 1
-    //     }
+      function pre(){
+        if(index>0){
+            index--
+        }
+        else{
+            // index=3; /*or*/
+            index=  allposimages.length - 1
+        }
       
-    //      slide.src = allposimages[index];
-    //   }
+         slide.src = allposimages[index];
+      }
 
-    //   setInterval(next ,2000);
+      setInterval(next ,2000);
     </script> 
   </body>
 </html>
