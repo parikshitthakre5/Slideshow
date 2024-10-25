@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slideshow</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .imgcont {
+      margin: 50px auto;
+      width: fit-content;
+      position: relative;
+    }
+    .img {
+      height: 300px;
+      width: 450px;
+      object-fit: cover; /*Without any streching  */
+      border-radius: 20px;
+    }
+    .imgprop {
+      height: 50px;
+      position: absolute;
+      top: 40%;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    .pre {
+      left: 0;
+    }
+    .pre:hover {
+      transform: scale(0.8);
+    }
+    .next {
+      right: 0;
+    }
+    .next:hover {
+      transform: scale(0.8);
+    }
+  </style>
+  <body>
+    <div class="imgcont">
+      <img src="./images/car1.jpg" alt="img" class="img" id="primary" />
+      <img
+        src="./images/previous.png"
+        alt="img1"
+        class="imgprop pre"
+        onclick="pre()"
+      />
+      <img
+        src="./images/next.png"
+        alt="img2"
+        class="imgprop next"
+        onclick="next()"
+      />
+    </div>
+
+    <!-- <script>
+      const allposimages = [
+        "images/car1.jpg",
+        "images/car2.jpg",
+        "images/car3.jpg",
+        "images/car4.jpg",
+      ];
+
+      const slide = document.getElementById("primary");
+      let index = 0;
+
+      function next() {
+        if (index < allposimages.length - 1) {
+          index++;
+        } else {
+          index = 0;
+        }
+        slide.src = allposimages[index];
+      }
+
+      function pre(){
+        if(index>0){
+            index--
+        }
+        else{
+            // index=3; /*or*/
+            index=  allposimages.length - 1
+        }
+      
+         slide.src = allposimages[index];
+      }
+
+      setInterval(next ,2000);
+    </script> -->
+  </body>
+</html>
